@@ -14,4 +14,8 @@ public class TransacaoRepository {
     public void salvar(Transacao transacao){
         listaTransacao.add(transacao);
     }
+
+    public void deletar(){
+        listaTransacao.clear();
+    }
 }
