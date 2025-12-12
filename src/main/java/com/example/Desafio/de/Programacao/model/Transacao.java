@@ -1,6 +1,7 @@
 package com.example.Desafio.de.Programacao.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.PositiveOrZero;
 
@@ -17,11 +18,11 @@ public class Transacao {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "valor", nullable = false)
+    @NotNull
     @PositiveOrZero
     private BigDecimal valor;
 
-    @Column(name = "dataHora", nullable = false)
+    @NotNull
     @PastOrPresent
     private OffsetDateTime dataHora;
 
