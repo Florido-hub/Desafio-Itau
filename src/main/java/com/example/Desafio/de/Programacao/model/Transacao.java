@@ -19,7 +19,7 @@ public class Transacao {
 
     @Column(name = "valor", nullable = false)
     @PositiveOrZero
-    private BigDecimal valor;
+    private Double valor;
 
     @Column(name = "dataHora", nullable = false)
     @PastOrPresent
@@ -33,11 +33,11 @@ public class Transacao {
         this.id = id;
     }
 
-    public BigDecimal getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
